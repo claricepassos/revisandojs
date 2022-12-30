@@ -527,12 +527,209 @@ console.log(cachorros.includes('brenda')) */
 
 // console.log(saudacao)
 
-let generoFilme = prompt('Escolha um genero de filme').toUpperCase()
+// let generoFilme = prompt('Escolha um genero de filme').toUpperCase()
 
-let valorIngresso = Number(prompt('Qual o valor do ingresso'))
+// let valorIngresso = Number(prompt('Qual o valor do ingresso'))
 
-if (generoFilme === 'FANTASIA' && valorIngresso < 15){
-  console.log('Bom filme')
-} else{
-  console.log ('Escolha outro filme')
-}
+// if (generoFilme === 'FANTASIA' && valorIngresso < 15){
+//   const lanche = prompt('Escolha um lanche')
+//   console.log('Bom filme')
+//   console.log(lanche)
+// } else{
+//   console.log ('Escolha outro filme')
+// }
+
+// const nome = prompt('Qual seu nome')
+// const tipoJogo = prompt('IN ou DO').toUpperCase()
+// const etapa = prompt('SF indica semi-final; DT indica decisão de terceiro lugar; e FI indica final')
+// const categoria = Number(prompt('pode ser as opções 1, 2, 3 ou 4'))
+// let quantidadeIngresso = Number(prompt('Quantidade de ingressos'))
+
+// let valorIngresso
+
+// switch (etapa) {
+//   case 'SF':
+//     switch (categoria) {
+//       case 1:
+//         valorIngresso = 1320
+//         break;
+//       case 2:
+//         valorIngresso = 880
+//         break;
+//       case 3:
+//         valorIngresso = 550
+//         break;
+//       case 4:
+//         valorIngresso = 200
+//         break;
+//       default:
+//         valorIngresso = 0
+//         break;
+//     }
+//     break
+//   case 'DT':
+//     switch (categoria) {
+//       case 1:
+//         valorIngresso = 660
+//         break;
+//       case 2:
+//         valorIngresso = 440
+//         break;
+//       case 3:
+//         valorIngresso = 330
+//         break;
+//       case 4:
+//         valorIngresso = 170
+//         break;
+//       default:
+//         console.log('Coloque um número válido')
+//         break;
+//     }
+//     break
+
+// }
+
+
+// if (tipoJogo === "IN"){
+//   valorIngresso = valorIngresso * 4.1
+// }
+
+// console.log(nome)
+// console.log(tipoJogo)
+// console.log(etapa)
+// console.log(categoria)
+// console.log(quantidadeIngresso)
+// console.log(quantidadeIngresso * valorIngresso)
+
+// const usuarios = [
+//     { nome: "Amanda Rangel", apelido: "Mandi" },
+//     { nome: "Laís Petra", apelido: "Laura" },
+//     { nome: "Letícia Chijo", apelido: "Chijo" }
+//   ]
+
+//   const novoArrayA = usuarios.map((item, index, array) => {
+//      console.log(item, index, array)
+//   })
+
+//   const usuarios = [
+//     { nome: "Amanda Rangel", apelido: "Mandi" },
+//     { nome: "Laís Petra", apelido: "Laura" },
+//     { nome: "Letícia Chijo", apelido: "Chijo" },
+//   ]
+
+//   const novoArrayB = usuarios.map((item, index, array) => {
+//      return item.nome
+//   })
+
+//   console.log(novoArrayB)
+
+// const usuarios = [
+//     { nome: "Amanda Rangel", apelido: "Mandi" },
+//     { nome: "Laís Petra", apelido: "Laura" },
+//     { nome: "Letícia Chijo", apelido: "Chijo" },
+//   ]
+
+//   const novoArrayC = usuarios.filter((item, index, array) => {
+//      return item.apelido !== "Chijo"
+//   })
+
+//   console.log(novoArrayC)
+
+// const pets = [
+//     { nome: "Lupin", raca: "Salsicha" },
+//     { nome: "Polly", raca: "Lhasa Apso" },
+//     { nome: "Madame", raca: "Poodle" },
+//     { nome: "Quentinho", raca: "Salsicha" },
+//     { nome: "Fluffy", raca: "Poodle" },
+//     { nome: "Caramelo", raca: "Vira-lata" },
+// ]
+
+// const nomes = pets.map((item) => {
+//     return item.nome
+// })
+
+// console.log(nomes)
+
+// const cachorroSalsicha = pets.filter((item) => {
+//     return item.raca === "Salsicha"
+// })
+
+// console.log(cachorroSalsicha)
+
+// const mensagem = pets.filter((item) =>{
+//     return item.raca ==="Poodle"
+// }).map((item) =>{
+//     return (`Você ganhou um cupom de desconto de 10% para tosar o/a ${item.nome}!`)
+// })
+
+// console.log(mensagem)
+
+const produtos = [
+    { nome: "Alface Lavada", categoria: "Hortifruti", preco: 2.5 },
+    { nome: "Guaraná 2l", categoria: "Bebidas", preco: 7.8 },
+    { nome: "Veja Multiuso", categoria: "Limpeza", preco: 12.6 },
+    { nome: "Dúzia de Banana", categoria: "Hortifruti", preco: 5.7 },
+    { nome: "Leite", categoria: "Bebidas", preco: 2.99 },
+    { nome: "Cândida", categoria: "Limpeza", preco: 3.30 },
+    { nome: "Detergente Ypê", categoria: "Limpeza", preco: 2.2 },
+    { nome: "Vinho Tinto", categoria: "Bebidas", preco: 55 },
+    { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
+    { nome: "Sabão em Pó Ypê", categoria: "Limpeza", preco: 10.80 }
+ ]
+
+ const nomeProdutos = produtos.map((item)=>{
+    return (item.nome)
+ })
+
+console.log(nomeProdutos)
+
+const objeto = produtos.map((item)=>{
+    const nome = item.nome
+    const preco = (item.preco * 0.95).toFixed(2)
+    return ({nome, preco})
+})
+
+console.log(objeto)
+
+const produtosFiltrado = produtos.filter((item)=>{
+return item.categoria === "Bebidas"
+})
+
+console.log(produtosFiltrado)
+
+const ype = produtos.filter((item)=>{
+    return item.nome.includes('Ypê')
+})
+
+console.log(ype)
+
+const ype2 = produtos.filter((item)=>{
+    return item.nome.includes('Ypê')
+}).map((item)=>{
+    return (`Compre ${item.nome} por ${item.preco}`)
+})
+
+console.log(ype2)
+
+const pokemons = [
+    { nome: "Bulbasaur", tipo: "grama" },
+    { nome: "Bellsprout", tipo: "grama" },
+    { nome: "Charmander", tipo: "fogo" },
+    { nome: "Vulpix", tipo: "fogo" },
+    { nome: "Squirtle", tipo: "água" },
+    { nome: "Psyduck", tipo: "água" },
+ ]
+
+ const pokemonsAlfabetica = pokemons.map((item)=>{
+    return item.nome
+ })
+
+console.log(pokemonsAlfabetica.sort())
+
+const pokemonRepeticao = pokemons.map((item)=>{
+    return item.tipo
+})
+
+const semRepeticao = [...new Set(pokemonRepeticao)]
+
+console.log(semRepeticao)
